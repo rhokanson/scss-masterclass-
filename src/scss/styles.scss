@@ -5,6 +5,10 @@ header {
   padding: 0 40px;
   color: $red;
   position: fixed;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   h1 {
     font-weight: 400;
     font-size: 60px;
@@ -14,12 +18,11 @@ header {
     margin-bottom: 24px;
     line-height: 1.3;
     font-weight: 300;
-
   }
-  p:nth-child(2) {
+  p:nth-child(1) {
     font-size: 24px;
   }
-  p:nth-child(3) {
+  p:nth-child(2) {
     text-align: justify;
   }
   nav {
@@ -29,6 +32,9 @@ header {
     color: rgba(0,0,0,0.5);
     margin-right: 5px;
     line-height: 1.5;
+    &:hover {
+      color: rgba(0,0,0,0.9);
+    }
   }
   p:last-child {
     color: rgba(0,0,0,0.5);
@@ -38,7 +44,37 @@ header {
 
 main {
   margin-left: 400px;
+  color: white;
+  .wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+  }
   section {
-    background-color: $red;
+    background: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.1) 5%,
+      transparent,
+      transparent,
+      transparent,
+      transparent
+    )
+    $red;
+    padding: 100px 0;
+    .movie__title {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      width: 590px;
+      margin-bottom: 20px;
+      h2 {
+      font-size: 48px;
+      font-weight: 600;
+      }
+    }
+    img {   
+      box-shadow: 0 80px 80px -80px #000, 0 0 12px rgba(0, 0, 0, 0.06),
+        inset 0 0 0 1px rgba(0, 0, 0, 0.2);
+    }
   }
 }
